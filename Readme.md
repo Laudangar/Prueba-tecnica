@@ -55,38 +55,3 @@ El proyecto contine 7 carpetas, el las cuales se encuentra:
 Todas estas pruebas se realizaron en Chrome version 130.0.6723.60 (Build oficial) (64 bits)
 
 
-# Reporte de BUGS 
-* ID 1 El sistema permite registrar un usuario con un email que ya está en la base de datos.
-Pasos para reproducir:
-  1. Ingresar a la pagina de registro
-  2. Llenar los datos correspondientes 
-  3. Registrar un usuario con el email "Laura@gmail.com". 
-  4. Darle crear 
-  5. Intentar registrar otro usuario con el mismo email.
-  
-Resultado esperado: Debería mostrarse un mensaje de error indicando que el email ya está registrado.
-
-Resultado actual: El sistema permite registrar el mismo email.
-
-* ID 2 El sistema permite registrar un email que no cumple con el formato estándar.
-  Pasos para reproducir
-  1. Ingresar a la pagina de registro
-  2. Llenar los datos correspondientes 
-  3. Registrar un usuario con el email "Laura.com". 
-  4. Darle crear
-
-Resultado esperado: Deberia mandar un mensaje de error indicando que el email no es valido
-Resultado Actual: El sistema permite registrar dicho email
-
-* ID 3 Despues de registrar el email invalido, la pagina permite el inicio de sesion 
-  Pasos para reproducir:
-  1. Ingresar a la pagina de registro
-  2. Llenar los datos correspondientes 
-  3. Registrar un usuario con el email "Laura.com". 
-  4. Darle crear
-  5. Ir a la pagina de inicio de sesion
-  6. Ingresar el email ""Laura.com""
-  7. Ingresar la contraseña
-  8. ingresar a la pagina
-
-
