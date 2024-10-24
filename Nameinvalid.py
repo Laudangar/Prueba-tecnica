@@ -1,4 +1,3 @@
-import pytest
 from selenium import webdriver
 import time
 import Data
@@ -12,21 +11,20 @@ class TestUser:
         cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
 
-    def test_user_registration_valid(self):
-        #Prueba para registrar un usuario válido
+
+    def test_user_registration_invalid_name(self):
+        #Prueba para validar nombre con menos de 2 palabras
         self.driver.get(Data.signup_url)
         signup_page = SignUP(self.driver)
 
         signup_page.select_button()
-        signup_page.set_fullname(Data.name)
+        signup_page.set_fullname("Laura")  # Nombre inválido
         signup_page.set_email(Data.email)
         signup_page.set_password(Data.password)
         signup_page.set_repeat(Data.password)
         signup_page.submit_signup()
 
-        assert "Registro exitoso" in self.driver.page_source, "Error: Registro fallido para un usuario válido."
-        time.sleep(2)
-
+        assert "El nombre debe tener al menos 2 palabras" in self.driver.page_source, "Error: Validación de nombre no funcionó."
 
     def test_user_login(self):
         #Prueba para iniciar sesión con un usuario válido
@@ -51,6 +49,3 @@ class TestUser:
     @classmethod
     def teardown_class(cls):
         cls.driver.quit()
-
-
-

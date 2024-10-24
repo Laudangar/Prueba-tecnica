@@ -1,4 +1,5 @@
 signin_url = 'https://test-qa.inlaze.com/auth/sign-in'
+signup_url = 'https://test-qa.inlaze.com/register'
 email = 'Laura@gmail.com'
 password = 'Laura12$'
 name = 'Laura Garcia'
