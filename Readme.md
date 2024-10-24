@@ -4,7 +4,7 @@ En este proyecto se encuentra la automatización del registro, inicio de sesion 
 
 ## CONTENIDO
 
-El proyecto contine 7 carpetas, el las cuales se encuentra:
+El proyecto contine 8 carpetas, el las cuales se encuentra:
 
 * data.py: Dentro de este se almacena la información que se enviara en las solicitudes, así mismo las configuraciones para el proyecto en donde se almacenan la ruta al servidor.
 
@@ -29,6 +29,9 @@ El proyecto contine 7 carpetas, el las cuales se encuentra:
 
 
 * Passwordinvalid:Esta carpeta es igual que la anterior nombrada el cambio es que en esta tambien se encuentra diferente el test_login, modificado para evaluar si permite el ingreso de una contraseña no valida.
+
+
+* Email&Passwordnocreados: Esta carpeta solo se enforca en poner un usuario y una contraseña no registradas con anterioridad, esto para validar si permitia el acceso o no 
 
 
 * README.md: El cual guarda la descripción del proyecto.
